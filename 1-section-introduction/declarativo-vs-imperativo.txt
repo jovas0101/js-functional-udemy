@@ -1,0 +1,46 @@
+Declarativo vs Imperativo!
+
+- Imperativo: 
+! "COMO"  o código deve ser feito??
+
+* Estado mutáveis
+* Maior quantidade ded código
+* Baixo de nível de escabilidade
+* Mais explícito
+
+-------------------------------------------------
+
+- Declarativo
+! O que precisa ser feito??
+
+* Foco na lógica
+* Iuutablidade
+* Menor quantidade de código
+* Alto nível de escabilidade
+* Menos explícito
+
+-----------------------------------------------
+
+Código Imperativo ou Declarativo?
+
+* Exemplo de um BD SQL
+
+SELECT 
+    matricula, nome , email , media
+FROM 
+    alunos
+WHERE 
+    media >= 9
+
+!! este é um exemeplo de código "Declarativo", pois não sabemos como é feito a buscas de dados apenas o que precisa ser selecionado! Na tabela.
+
+
+* Array de Notas
+
+-----------------------------------------------
+
+First Class Functions (Função de primeira classse)! = função são valores!
+
+
+
+
