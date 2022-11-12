@@ -10,5 +10,4 @@ exec(subtrairNoterminal, 182, 27);
 
 // ------------------------------------
 
-
 setInterval(() => console.log("Exec 2..."), 1000);
