@@ -1,6 +1,11 @@
-// como funciona o map internamente!
+/*
 
-const compra = [
+1) Mapeie o Array buscando calcular quantidade * preço;
+
+2) Filtre os as quantidades maiores que 3;
+*/
+
+const produtos = [
   { nome: "Caneta", qtde: 10, preco: 7.99 },
   { nome: "Impressora", qtde: 0, preco: 649.5 },
   { nome: "Caderno", qtde: 4, preco: 27.1 },
@@ -8,7 +13,7 @@ const compra = [
   { nome: "Tesoura", qtde: 1, preco: 19.2 },
 ];
 
-Array.prototype.myMap = function (fn) {
+Array.prototype.MapProduct = function (fn) {
   const mapped = [];
 
   for (let i = 0; i < this.length; i++) {
@@ -18,24 +23,20 @@ Array.prototype.myMap = function (fn) {
   return mapped;
 };
 
-const getNome = (item) => item.nome;
-console.log(compra.myMap(getNome));
-
 const getCalc = (item) => item.qtde * item.preco;
-console.log(compra.myMap(getCalc));
+
+console.log(produtos.MapProduct(getCalc));
 
 Array.prototype.myFilter = function (fn) {
-  const novoArray = [];
+  const newArray = [];
 
   for (let i = 0; i < this.length; i++) {
-    if (fn(this[i], i, this)) {
-        novoArray.push(this[i])
-    }
+    fn(this[i], i, this) ? newArray.push(this[i]) : this;
   }
 
-  return novoArray;
+  return newArray;
 };
 
-// if (fn(this[i], i, this)) {
-//     filter.push();
-//   }
+const productQtdMaiorTres = (item) => item.qtde >= 3;
+
+console.log(produtos.myFilter(productQtdMaiorTres));
